@@ -1,0 +1,7 @@
+[core]
+	editor = vi -w
+[user]
+	name = sdhutchins
+	email = sdhutchins@outlook.com
+[credential]
+	helper = cache --timeout=99999999
