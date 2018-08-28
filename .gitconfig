@@ -5,3 +5,20 @@
 	email = sdhutchins@outlook.com
 [credential]
 	helper = cache --timeout=99999999
+[color]
+  # Color everything.
+  ui = auto
+[color "diff"]
+  # Color syntax: <foreground> <background>
+  # So "normal red" is normal foreground, red background
+  # BUT bold is a modifier, so "bold green red" means
+  #   "bold green" foreground, red background
+  whitespace = red reverse
+  plain = black
+  meta = cyan
+  frag = magenta bold
+  old = red
+  new = green
+  commit = yellow
+[diff]
+  tool = vimdiff
