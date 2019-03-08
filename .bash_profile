@@ -2,18 +2,16 @@
 #THESE PATHS INCLUDE ACCESS TO Anaconda3 and NCBI's Blast which subsequently provide access to Python3.5 and blast commands.
 
 # App Paths
-#export PATH="/usr/share/Modules/3.2.10/bin:$PATH" # PATH for modulecmd
+export PATH="/ddn/home5/r2295/anaconda3/bin:$PATH" #adding anaconda3 path to user path
+export PATH="/ddn/home5/r2295/anaconda3:$PATH" #adding anaconda3 path for python
 export PATH="~/.local/bin:$PATH"
-export PATH="/usr/local/bin/anaconda3:$PATH" #adding anaconda3 path for python
-export PATH="/usr/local/apps/anaconda3/bin:$PATH" #adding anaconda3 path to user path
-export PATH="/usr/local/apps/bin:$PATH" #adding apps path to user path
-export PATH="/usr/local/apps:$PATH" #adding apps path to user path
-export PATH="/usr/local:$PATH" #adding apps path to user path
-export PATH="/ddn/apps1/anaconda3/bin:$PATH"
+#export PATH="/usr/local/apps/bin:$PATH" #adding apps path to user path
+#export PATH="/usr/local/apps:$PATH" #adding apps path to user path
+#export PATH="/usr/local:$PATH" #adding apps path to user path
 
 
 # NCBI Path
-export PATH="/ddn/home5/r2295/ptmp/software/ncbi-blast-2.6.0+/bin:$PATH" #adding NCBI BLAST bin that includes commands
+#export PATH="/ddn/home5/r2295/ptmp/software/ncbi-blast-2.6.0+/bin:$PATH" #adding NCBI BLAST bin that includes commands
 
 # NCBI & BLAST Related Paths
 export BLASTDB="/ddn/home3/vallender/databases/ncbi/blast/db/refseq_rna:$BLASTDB"
@@ -67,4 +65,4 @@ alias editprof='vi ~/.bash_profile'
 alias valprojs='cd /ddn/home3/vallender/Projects/'
 alias suicideseq='cd /ddn/home3/vallender/Impulsivity'
 alias reload='source ~/.bash_profile'
-alias spyder3='python3 /ddn/home5/r2295/.local/bin/spyder3'
+alias spyder3='anaconda3/bin/python3 /ddn/home5/r2295/anaconda3/bin/spyder'
