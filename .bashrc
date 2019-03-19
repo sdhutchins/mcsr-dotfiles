@@ -47,3 +47,10 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 source ~/.bash_profile
+
+echo
+tput setaf 2; 
+echo "##########################################################"
+echo "##                 Welcome, $(whoami)!                      ##"
+echo "##########################################################"
+echo

@@ -55,6 +55,13 @@ export PATH="$HOME/ptmp/software/putty-0.68/bin:$PATH" # Putty executables
 # Path to my bin
 export PATH="$HOME/bin/:$PATH"
 
+# Use powerline-status `pip install powerline-status`
+export PATH=$PATH:$HOME/.local/lib/python3.6/site-packages
+powerline-daemon -q
+POWERLINE_BASH_CONTINUATION=1
+POWERLINE_BASH_SELECT=1
+. $HOME/.local/lib/python3.6/site-packages/powerline/bindings/bash/powerline.sh
+
 #########################################################################################################################
 
 # Various Aliases
@@ -66,7 +73,7 @@ alias sequoia='ssh -X -Y $USERNAME@sequoia.mcsr.olemiss.edu'
 alias catalpa='ssh -X -Y $USERNAME@catalpa.mcsr.olemiss.edu'
 alias valbin='cd $GROUP'
 alias editprofile='vi $HOME/.bash_profile'
-alias valprojects='cd $GROUP/Projects/'
+alias valprojects='cd $GROUP/projects/'
 alias impulsivity='cd $GROUP/Impulsivity'
 alias reload='source $HOME/.bash_profile'
 alias spyder3='$HOME/anaconda3/bin/python3 $HOME/anaconda3/bin/spyder'
