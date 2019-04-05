@@ -10,10 +10,12 @@ USERNAME="r2295"
 export PATH="$HOME/anaconda3/bin:$PATH" #adding anaconda3 path to user path
 export PATH="$HOME/anaconda3:$PATH" #adding anaconda3 path for python
 export PATH="$HOME/.local/bin:$PATH"
-#export PATH="/usr/local/apps/bin:$PATH" #adding apps path to user path
+export PATH="/usr/local/apps/bin:$PATH" #adding apps path to user path
 #export PATH="/usr/local/apps:$PATH" #adding apps path to user path
 #export PATH="/usr/local:$PATH" #adding apps path to user path
 
+# Visual Studio Code path
+export PATH="$HOME/ptmp/software/VSCode-linux-x64/bin:$PATH"
 
 # NCBI Path
 #export PATH="$HOME/ptmp/software/ncbi-blast-2.6.0+/bin:$PATH" #adding NCBI BLAST bin that includes commands
@@ -67,6 +69,10 @@ POWERLINE_BASH_SELECT=1
 # Various Aliases
 alias h='history'
 alias home='cd $HOME'
+alias branchlist='git branch --list'
+alias fetchall='git fetch --all'
+alias gstatus='git status'
+alias commit='git commit -m'
 alias ncbiftp='ftp ftp.ncbi.nlm.nih.gov'
 alias maple='ssh -X -Y $USERNAME@maple.mcsr.olemiss.edu'
 alias sequoia='ssh -X -Y $USERNAME@sequoia.mcsr.olemiss.edu'
@@ -77,3 +83,4 @@ alias valprojects='cd $GROUP/projects/'
 alias impulsivity='cd $GROUP/Impulsivity'
 alias reload='source $HOME/.bash_profile'
 alias spyder3='$HOME/anaconda3/bin/python3 $HOME/anaconda3/bin/spyder'
+export PATH="/home/ums/r2295/.beRi/.rinse/bin:$PATH"
