@@ -7,22 +7,15 @@ GROUP="/ddn/home3/vallender"
 USERNAME="r2295"
 
 # App Paths
-export PATH="$HOME/anaconda3/bin:$PATH" #adding anaconda3 path to user path
-export PATH="$HOME/anaconda3:$PATH" #adding anaconda3 path for python
-export PATH="$HOME/.local/bin:$PATH"
-export PATH="/usr/local/apps/bin:$PATH" #adding apps path to user path
-#export PATH="/usr/local/apps:$PATH" #adding apps path to user path
-#export PATH="/usr/local:$PATH" #adding apps path to user path
+export PATH="$HOME/anaconda3:$HOME/anaconda3/bin:$HOME/.local/bin:/usr/local/apps/bin:/ddn/home5/r2295/valbin/software/ncbi-blast-2.8.1+/bin:$PATH" # Ensure order of paths.
 
 # Visual Studio Code path
 export PATH="$HOME/ptmp/software/VSCode-linux-x64/bin:$PATH"
 
-# NCBI Path
-#export PATH="$HOME/ptmp/software/ncbi-blast-2.6.0+/bin:$PATH" #adding NCBI BLAST bin that includes commands
-
 # NCBI & BLAST Related Paths
-export BLASTDB="$GROUP/databases/ncbi/blast/db/refseq_rna:$BLASTDB"
+export BLASTDB="$GROUP/databases/ncbi/blast/db/v5/refseq_rna_v5:$BLASTDB"
 export BLASTDB="$GROUP/databases/ncbi/blast/db/nr:$BLASTDB"
+export BLASTDB="$HOME/databases/ncbi/blast/db/refseq_rna:$BLASTDB"
 export DATA_LOADERS="blastdb,genbank:$DATA_LOADERS"
 
 # Alignment and Phylogenetics Software Paths
@@ -82,5 +75,8 @@ alias editprofile='vi $HOME/.bash_profile'
 alias valprojects='cd $GROUP/projects/'
 alias impulsivity='cd $GROUP/Impulsivity'
 alias reload='source $HOME/.bash_profile'
-alias spyder3='$HOME/anaconda3/bin/python3 $HOME/anaconda3/bin/spyder'
-export PATH="/home/ums/r2295/.beRi/.rinse/bin:$PATH"
+alias spyder3='$HOME/anaconda3/bin/python3 $HOME/anaconda3/bin/spyder --multithread -w .'
+alias mkdirv='mkdir -m 2770'
+alias mkdirme='mkdir -m 0700'
+alias rmtar='rm -rf *.tar.gz'
+alias catjob='qsub -I -V -lncpus=4 -lmem=8gb' # Start an interactive job on catalpa.
