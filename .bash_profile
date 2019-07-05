@@ -1,4 +1,4 @@
-##### PATHS THAT NEED TO BE ADDED FOR A FULLY FUNCTIONAL ENVIRONMENT #####
+## PATHS THAT NEED TO BE ADDED FOR A FULLY FUNCTIONAL ENVIRONMENT ##
 
 # A variable vallender group folder.
 GROUP="/ddn/home3/vallender"
@@ -7,7 +7,7 @@ GROUP="/ddn/home3/vallender"
 USERNAME="r2295"
 
 # App Paths
-export PATH="$HOME/anaconda3:$HOME/anaconda3/bin:$HOME/.local/bin:/usr/local/apps/bin:/ddn/home5/r2295/valbin/software/ncbi-blast-2.8.1+/bin:$PATH" # Ensure order of paths.
+export PATH="$HOME/anaconda3:$HOME/anaconda3/bin:$HOME/.local/bin:/usr/local/apps/bin:$GROUP/software/ncbi-blast-2.8.1+/bin:$PATH" # Ensure order of paths.
 
 # Visual Studio Code path
 export PATH="$HOME/ptmp/software/VSCode-linux-x64/bin:$PATH"
@@ -57,9 +57,8 @@ POWERLINE_BASH_CONTINUATION=1
 POWERLINE_BASH_SELECT=1
 . $HOME/.local/lib/python3.6/site-packages/powerline/bindings/bash/powerline.sh
 
-#########################################################################################################################
 
-# Various Aliases
+## ALIASES ##
 alias h='history'
 alias home='cd $HOME'
 alias branchlist='git branch --list'
@@ -76,7 +75,22 @@ alias valprojects='cd $GROUP/projects/'
 alias impulsivity='cd $GROUP/Impulsivity'
 alias reload='source $HOME/.bash_profile'
 alias spyder3='$HOME/anaconda3/bin/python3 $HOME/anaconda3/bin/spyder --multithread -w .'
-alias mkdirv='mkdir -m 2770'
-alias mkdirme='mkdir -m 0700'
+alias mkdirv='mkdir -pvm 2770'
+alias mkdirme='mkdir -pvm 0700'
 alias rmtar='rm -rf *.tar.gz'
 alias catjob='qsub -I -V -lncpus=4 -lmem=8gb' # Start an interactive job on catalpa.
+alias ls='ls --color=auto'
+alias ll='ls -la'
+alias l.='ls -d .* --color=auto'
+alias cd..='cd ..'
+alias ..='cd ..'
+alias ...='cd ../../'
+alias ....='cd ../../../'
+alias .....='cd ../../../../'
+alias .4='cd ../../../../'
+alias .5='cd ../../../../../'
+alias now='date +"%T"'
+alias nowtime=now
+alias nowdate='date +"%d-%m-%Y"'
+alias wget='wget -c'
+alias mkdir='mkdir -pv'
