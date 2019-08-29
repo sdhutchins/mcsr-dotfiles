@@ -12,6 +12,9 @@ export PATH="$HOME/anaconda3:$HOME/anaconda3/bin:$HOME/.local/bin:/usr/local/app
 # Visual Studio Code path
 export PATH="$HOME/ptmp/software/VSCode-linux-x64/bin:$PATH"
 
+# Pedigree Reconstruction Software Paths
+export PATH="$HOME/ptmp/software/console:$PATH" # STRUCTURE
+
 # NCBI & BLAST Related Paths
 export BLASTDB="$GROUP/databases/ncbi/blast/db/v5/refseq_rna_v5:$BLASTDB"
 export BLASTDB="$GROUP/databases/ncbi/blast/db/nr:$BLASTDB"
@@ -28,14 +31,10 @@ export PATH="$HOME/ptmp/software/beast:$PATH"
 export PATH="$HOME/ptmp/software/hmmer-3.1b2-linux-intel-x86_64/bin:$PATH"
 export PATH="$HOME/ptmp/software/hmmer-3.1b2-linux-intel-x86_64/:$PATH" 
 export PATH="$HOME/ptmp/software/PhyML/src:$PATH"
-export PATH="$HOME/ptmp/software/mega:$PATH" 
-export PATH="$HOME/ptmp/software/PAML/paml48/bin:$PATH"
-export PATH="$HOME/ptmp/software/pal2nal:$PATH"
-export PATH="$HOME/ptmp/software/PfamScan:$PATH"
+export PATH="$HOME/ptmp/software/mega:$HOME/ptmp/software/PAML/paml48/bin:$HOME/ptmp/software/pal2nal:$HOME/ptmp/software/PfamScan:$PATH" 
 
 # RNA-Seq software path
-export PATH="/usr/local/apps/bowtie2-2.2.9:$PATH"
-export PATH="$GROUP/cufflinks-2.2.1.Linux_x86_64:$PATH"
+export PATH="$GROUP/software/bowtie2-2.2.5:$GROUP/software/cufflinks-2.2.1.Linux_x86_64:$GROUP/software/tophat-2.1.1.Linux_x86_64:$PATH"
 
 # Vallender Executables Path
 export PATH="$GROUP/executable-scripts:$PATH"
@@ -60,15 +59,16 @@ POWERLINE_BASH_SELECT=1
 
 ## ALIASES ##
 alias h='history'
+alias dir='ls -lah'
 alias home='cd $HOME'
 alias branchlist='git branch --list'
 alias fetchall='git fetch --all'
 alias gstatus='git status'
 alias commit='git commit -m'
 alias ncbiftp='ftp ftp.ncbi.nlm.nih.gov'
-alias maple='ssh -X -Y $USERNAME@maple.mcsr.olemiss.edu'
-alias sequoia='ssh -X -Y $USERNAME@sequoia.mcsr.olemiss.edu'
-alias catalpa='ssh -X -Y $USERNAME@catalpa.mcsr.olemiss.edu'
+alias maple='ssh -X -Y -v $USERNAME@maple.mcsr.olemiss.edu'
+alias sequoia='ssh -X -Y -v $USERNAME@sequoia.mcsr.olemiss.edu'
+alias catalpa='ssh -X -Y -v $USERNAME@catalpa.mcsr.olemiss.edu'
 alias valbin='cd $GROUP'
 alias editprofile='vi $HOME/.bash_profile'
 alias valprojects='cd $GROUP/projects/'
@@ -78,7 +78,7 @@ alias spyder3='$HOME/anaconda3/bin/python3 $HOME/anaconda3/bin/spyder --multithr
 alias mkdirv='mkdir -pvm 2770'
 alias mkdirme='mkdir -pvm 0700'
 alias rmtar='rm -rf *.tar.gz'
-alias catjob='qsub -I -V -lncpus=4 -lmem=8gb' # Start an interactive job on catalpa.
+alias catjob='qsub -I -V -lncpus=32 -lmem=32gb' # Start an interactive job on catalpa.
 alias ls='ls --color=auto'
 alias ll='ls -la'
 alias l.='ls -d .* --color=auto'
