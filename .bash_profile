@@ -12,9 +12,6 @@ export PATH="$HOME/anaconda3:$HOME/anaconda3/bin:$HOME/.local/bin:/usr/local/app
 # Visual Studio Code path
 export PATH="$HOME/ptmp/software/VSCode-linux-x64/bin:$PATH"
 
-# Pedigree Reconstruction Software Paths
-export PATH="$HOME/ptmp/software/console:$PATH" # STRUCTURE
-
 # NCBI & BLAST Related Paths
 export BLASTDB="$GROUP/databases/ncbi/blast/db/v5/refseq_rna_v5:$BLASTDB"
 export BLASTDB="$GROUP/databases/ncbi/blast/db/nr:$BLASTDB"
@@ -34,10 +31,11 @@ export PATH="$HOME/ptmp/software/PhyML/src:$PATH"
 export PATH="$HOME/ptmp/software/mega:$HOME/ptmp/software/PAML/paml48/bin:$HOME/ptmp/software/pal2nal:$HOME/ptmp/software/PfamScan:$PATH" 
 
 # RNA-Seq software path
-export PATH="$GROUP/software/bowtie2-2.2.5:$GROUP/software/cufflinks-2.2.1.Linux_x86_64:$GROUP/software/tophat-2.1.1.Linux_x86_64:$PATH"
+# export PATH="$GROUP/software/bowtie2-2.2.5:$GROUP/software/cufflinks-2.2.1.Linux_x86_64:$GROUP/software/tophat-2.1.1.Linux_x86_64:$PATH"
 
 # Vallender Executables Path
 export PATH="$GROUP/executable-scripts:$PATH"
+export PATH="$GROUP/wrapper-scripts:$PATH"
 
 # EDIRECT
 export PATH="$HOME/edirect:$PATH"
